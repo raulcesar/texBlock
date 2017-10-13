@@ -5,8 +5,10 @@ const moment = require('moment');
 
 const invalidTestFunctions = [
     (previousBlock, currentBlock) => {
-        return !(currentBlock.hash === currentBlock.calculateHash() &&
-            previousBlock.hash === previousBlock.calculateHash());
+        return !(
+            currentBlock.hash === currentBlock.calculateHash() &&
+            previousBlock.hash === previousBlock.calculateHash()
+        );
     },
 
     (previousBlock, currentBlock) => {
